@@ -15,7 +15,7 @@ public class AEFoodCodeBuilder
         RandomNumberGenerator = new RandomBuilder();
     }
 
-    public string Generate()
+    public string GenerateCode()
     {
         StringBuilder sb = new();
         for (var i = 0; i < 7; i++)
@@ -28,7 +28,7 @@ public class AEFoodCodeBuilder
         return string.Concat("Ürün Kodu : ", sb.ToString());
     }
 
-    public string Validate(string code)
+    public string IsValid(string code)
     {
         if (string.IsNullOrEmpty(code))
             throw new Exception("Provide a code to be validated");

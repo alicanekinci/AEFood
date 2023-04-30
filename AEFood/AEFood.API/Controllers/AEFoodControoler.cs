@@ -18,12 +18,12 @@ public class AEFoodControoler : ControllerBase
     [HttpGet("GetCode")]
     public string GetCode()
     {
-        return _builder.Generate();
+        return _builder.GenerateCode();
     }
 
     [HttpGet("CheckCode")]
     public string CheckCode(string code)
     {
-        return _builder.Validate(code);
+        return _builder.IsValid(code);
     }
 }
